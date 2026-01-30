@@ -1,11 +1,13 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import FormSection from '../FormSection';
-import { ReadmeFormData } from '../../types';
+import type { ReadmeFormData } from '../../types';
 
 describe('FormSection', () => {
   const mockData: ReadmeFormData = {
     repoName: 'test-repo',
+    githubUsername: 'test-user',
+    workflowName: 'main.yml',
     description: 'test-desc',
     techStack: [],
     installCommand: 'npm install',

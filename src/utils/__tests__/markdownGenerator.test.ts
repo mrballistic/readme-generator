@@ -1,21 +1,25 @@
 import { describe, expect, it } from 'vitest';
 import { generateBadges, generateTechStack, generateLicenseSection, generateReadme } from '../markdownGenerator';
+import type { ReadmeFormData } from '../../types';
 
 describe('markdownGenerator', () => {
   describe('generateBadges', () => {
     it('should return empty string if no badges selected', () => {
-      expect(generateBadges('test-repo', [], 'MIT')).toBe('');
+      expect(generateBadges('test-repo', 'octocat', 'main.yml', [])).toBe('');
     });
 
     it('should generate build badge', () => {
-      const result = generateBadges('test-repo', ['build'], 'MIT');
+      const result = generateBadges('test-repo', 'octocat', 'main.yml', ['build']);
       expect(result).toContain('![Build](https://img.shields.io/github/actions/workflow/status/');
       expect(result).toContain('test-repo');
+      expect(result).toContain('octocat');
+      expect(result).toContain('main.yml');
     });
 
     it('should generate license badge', () => {
-      const result = generateBadges('test-repo', ['license'], 'MIT');
+      const result = generateBadges('test-repo', 'octocat', 'main.yml', ['license']);
       expect(result).toContain('![License](https://img.shields.io/github/license/');
+      expect(result).toContain('octocat');
     });
   });
 
@@ -44,8 +48,10 @@ describe('markdownGenerator', () => {
   });
 
   describe('generateReadme', () => {
-    const mockFormData: any = {
+    const mockFormData: ReadmeFormData = {
       repoName: 'awesome-project',
+      githubUsername: 'octocat',
+      workflowName: 'main.yml',
       description: 'A project that is truly awesome.',
       techStack: ['React', 'TypeScript'],
       installCommand: 'npm install',

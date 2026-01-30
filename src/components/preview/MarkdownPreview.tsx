@@ -1,6 +1,5 @@
-import React from 'react';
 import ReactMarkdown from 'react-markdown';
-import { Box, useTheme, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
 interface MarkdownPreviewProps {
@@ -10,6 +9,7 @@ interface MarkdownPreviewProps {
 const MarkdownContainer = styled(Box)(({ theme }) => ({
   color: theme.palette.text.primary,
   '& h1, & h2, & h3': {
+    color: theme.palette.text.primary,
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(2),
     borderBottom: `1px solid ${theme.palette.divider}`,
@@ -44,8 +44,6 @@ const MarkdownContainer = styled(Box)(({ theme }) => ({
 }));
 
 const MarkdownPreview: React.FC<MarkdownPreviewProps> = ({ content }) => {
-  const theme = useTheme();
-
   if (!content) {
     return (
       <Box sx={{ py: 4, textAlign: 'center', color: 'text.secondary' }}>

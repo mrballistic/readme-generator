@@ -1,14 +1,15 @@
-import { ReadmeFormData, BadgeType, LicenseType } from '../types';
+import type { ReadmeFormData, BadgeType, LicenseType } from '../types';
 import { BADGE_CONFIGS } from '../constants/badges';
 
 export const escapeMarkdown = (text: string): string => {
-  return text.replace(/([\\`*_{}[\]()#+\-.!])/g, '\\$1');
+  return text.replace(/([\\`*_{}[\]()#])/g, '\\$1');
 };
 
 export const generateBadges = (
   repoName: string,
-  badges: BadgeType[],
-  license: LicenseType
+  githubUsername: string,
+  workflowName: string,
+  badges: BadgeType[]
 ): string => {
   if (badges.length === 0) return '';
 
@@ -16,8 +17,9 @@ export const generateBadges = (
     .map((type) => {
       const config = BADGE_CONFIGS[type];
       const url = config.shieldsUrl
-        .replace('{repo}', repoName || 'repo-name')
-        .replace('{user}', 'username');
+        .replace('{repo}', repoName || 'vitest')
+        .replace('{user}', githubUsername || 'vitest-dev')
+        .replace('{workflow}', workflowName || 'main.yml');
 
       return `![${config.label}](${url})`;
     })
@@ -39,6 +41,8 @@ export const generateLicenseSection = (license: LicenseType): string => {
 export const generateReadme = (formData: ReadmeFormData): string => {
   const {
     repoName,
+    githubUsername,
+    workflowName,
     description,
     techStack,
     installCommand,
@@ -50,17 +54,17 @@ export const generateReadme = (formData: ReadmeFormData): string => {
   const sections: string[] = [];
 
   // Title
-  sections.push(`# ${repoName || 'Project Name'}`);
+  sections.push(`# ${escapeMarkdown(repoName) || 'Project Name'}`);
 
   // Badges
-  const badgesMarkdown = generateBadges(repoName, badges, license);
+  const badgesMarkdown = generateBadges(repoName, githubUsername, workflowName, badges);
   if (badgesMarkdown) {
     sections.push(badgesMarkdown);
   }
 
   // Description
   if (description) {
-    sections.push(description);
+    sections.push(escapeMarkdown(description));
   }
 
   // Tech Stack

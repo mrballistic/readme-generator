@@ -4,7 +4,7 @@ import TextInput from './inputs/TextInput';
 import TechStackInput from './inputs/TechStackInput';
 import LicenseDropdown from './inputs/LicenseDropdown';
 import BadgeSelector from './inputs/BadgeSelector';
-import { ReadmeFormData, BadgeType, LicenseType } from '../types';
+import type { ReadmeFormData, BadgeType, LicenseType } from '../types';
 
 interface FormSectionProps {
   formData: ReadmeFormData;
@@ -30,6 +30,18 @@ const FormSection: React.FC<FormSectionProps> = ({ formData, onChange }) => {
           value={formData.repoName}
           onChange={(val) => handleChange('repoName', val)}
           placeholder="my-cool-project"
+        />
+        <TextInput
+          label="GitHub Username"
+          value={formData.githubUsername}
+          onChange={(val) => handleChange('githubUsername', val)}
+          placeholder="octocat"
+        />
+        <TextInput
+          label="Workflow File"
+          value={formData.workflowName}
+          onChange={(val) => handleChange('workflowName', val)}
+          placeholder="main.yml"
         />
         <TextInput
           label="Project Description"

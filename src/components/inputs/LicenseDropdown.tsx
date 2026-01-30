@@ -1,7 +1,8 @@
 import React from 'react';
-import { FormControl, InputLabel, Select, MenuItem, SelectChangeEvent } from '@mui/material';
+import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import type { SelectChangeEvent } from '@mui/material';
 import { LICENSE_OPTIONS } from '../../constants/licenses';
-import { LicenseType } from '../../types';
+import type { LicenseType } from '../../types';
 
 interface LicenseDropdownProps {
   value: LicenseType;

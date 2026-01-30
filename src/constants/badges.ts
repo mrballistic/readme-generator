@@ -1,10 +1,10 @@
-import { BadgeConfig, BadgeType } from '../types';
+import type { BadgeConfig, BadgeType } from '../types';
 
 export const BADGE_CONFIGS: Record<BadgeType, BadgeConfig> = {
   build: {
     type: 'build',
     label: 'Build',
-    shieldsUrl: 'https://img.shields.io/github/actions/workflow/status/{user}/{repo}/main.yml?label=build',
+    shieldsUrl: 'https://img.shields.io/github/actions/workflow/status/{user}/{repo}/{workflow}?label=build',
   },
   license: {
     type: 'license',

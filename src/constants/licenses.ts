@@ -1,4 +1,4 @@
-import { LicenseType } from '../types';
+import type { LicenseType } from '../types';
 
 export const LICENSE_OPTIONS: { value: LicenseType; label: string }[] = [
   { value: 'MIT', label: 'MIT' },

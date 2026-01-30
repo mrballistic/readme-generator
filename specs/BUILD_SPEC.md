@@ -182,132 +182,132 @@ Work through these in sequential order. Each task follows Test-Driven Developmen
 
 **Task 1: Install Dependencies**
 
-- [ ] Install MUI: `npm install @mui/material @emotion/react @emotion/styled`
-- [ ] Install MUI icons: `npm install @mui/icons-material`
-- [ ] Install react-markdown: `npm install react-markdown`
-- [ ] Install testing: `npm install -D vitest @testing-library/react @testing-library/jest-dom @testing-library/user-event jsdom`
-- [ ] Configure Vitest in `vite.config.ts`
-- [ ] Create test setup file
+- [x] Install MUI: `npm install @mui/material @emotion/react @emotion/styled`
+- [x] Install MUI icons: `npm install @mui/icons-material`
+- [x] Install react-markdown: `npm install react-markdown`
+- [x] Install testing: `npm install -D vitest @testing-library/react @testing-library/jest-dom @testing-library/user-event jsdom`
+- [x] Configure Vitest in `vite.config.ts`
+- [x] Create test setup file
 
 **Task 2: Create Types**
 
-- [ ] Create `src/types/index.ts` with all interfaces and types
+- [x] Create `src/types/index.ts` with all interfaces and types
 
 **Task 3: Create Constants (Test-First)**
 
-- [ ] Write tests for `constants/licenses.ts`
-- [ ] Implement `constants/licenses.ts`
-- [ ] Write tests for `constants/badges.ts`
-- [ ] Implement `constants/badges.ts`
-- [ ] Write tests for `constants/techStack.ts`
-- [ ] Implement `constants/techStack.ts`
+- [x] Write tests for `constants/licenses.ts`
+- [x] Implement `constants/licenses.ts`
+- [x] Write tests for `constants/badges.ts`
+- [x] Implement `constants/badges.ts`
+- [x] Write tests for `constants/techStack.ts`
+- [x] Implement `constants/techStack.ts`
 
 ### Phase 2: Core Utilities (Test-First)
 
 **Task 4: Markdown Generator - Badges**
 
-- [ ] Write tests for `generateBadges()`
-- [ ] Implement `generateBadges()`
+- [x] Write tests for `generateBadges()`
+- [x] Implement `generateBadges()`
 
 **Task 5: Markdown Generator - Tech Stack**
 
-- [ ] Write tests for `generateTechStack()`
-- [ ] Implement `generateTechStack()`
+- [x] Write tests for `generateTechStack()`
+- [x] Implement `generateTechStack()`
 
 **Task 6: Markdown Generator - License**
 
-- [ ] Write tests for `generateLicenseSection()`
-- [ ] Implement `generateLicenseSection()`
+- [x] Write tests for `generateLicenseSection()`
+- [x] Implement `generateLicenseSection()`
 
 **Task 7: Markdown Generator - Main**
 
-- [ ] Write tests for `generateReadme()`
-- [ ] Implement `generateReadme()`
+- [x] Write tests for `generateReadme()`
+- [x] Implement `generateReadme()`
 
 **Task 8: Clipboard Utility**
 
-- [ ] Write tests for `copyToClipboard()`
-- [ ] Implement `copyToClipboard()`
+- [x] Write tests for `copyToClipboard()`
+- [x] Implement `copyToClipboard()`
 
 ### Phase 3: Theme
 
 **Task 9: Create Theme**
 
-- [ ] Implement `theme/index.ts` with light and dark modes
-- [ ] Test manually in browser
+- [x] Implement `theme/index.ts` with light and dark modes
+- [x] Test manually in browser
 
 ### Phase 4: UI Components (Test-First, Bottom-Up)
 
 **Task 10: TextInput Component**
 
-- [ ] Write tests for TextInput
-- [ ] Implement TextInput with MUI TextField
+- [x] Write tests for TextInput
+- [x] Implement TextInput with MUI TextField
 
 **Task 11: LicenseDropdown Component**
 
-- [ ] Write tests for LicenseDropdown
-- [ ] Implement LicenseDropdown with MUI Select
+- [x] Write tests for LicenseDropdown
+- [x] Implement LicenseDropdown with MUI Select
 
 **Task 12: BadgeSelector Component**
 
-- [ ] Write tests for BadgeSelector
-- [ ] Implement BadgeSelector with MUI Checkboxes
+- [x] Write tests for BadgeSelector
+- [x] Implement BadgeSelector with MUI Checkboxes
 
 **Task 13: TechStackInput Component**
 
-- [ ] Write tests for TechStackInput
-- [ ] Implement TechStackInput with MUI Autocomplete
+- [x] Write tests for TechStackInput
+- [x] Implement TechStackInput with MUI Autocomplete
 
 **Task 14: CopyButton Component**
 
-- [ ] Write tests for CopyButton
-- [ ] Implement CopyButton with MUI Button + Snackbar
+- [x] Write tests for CopyButton
+- [x] Implement CopyButton with MUI Button + Snackbar
 
 **Task 15: MarkdownPreview Component**
 
-- [ ] Write tests for MarkdownPreview
-- [ ] Implement MarkdownPreview with react-markdown
-- [ ] Add theme-aware styling
+- [x] Write tests for MarkdownPreview
+- [x] Implement MarkdownPreview with react-markdown
+- [x] Add theme-aware styling
 
 ### Phase 5: Container Components
 
 **Task 16: FormSection Component**
 
-- [ ] Write tests for FormSection
-- [ ] Implement FormSection with all child inputs
+- [x] Write tests for FormSection
+- [x] Implement FormSection with all child inputs
 
 **Task 17: PreviewSection Component**
 
-- [ ] Write tests for PreviewSection
-- [ ] Implement PreviewSection with preview and copy button
+- [x] Write tests for PreviewSection
+- [x] Implement PreviewSection with preview and copy button
 
 ### Phase 6: Integration
 
 **Task 18: App Component**
 
-- [ ] Write tests for App
-- [ ] Implement App with ThemeProvider, state, and layout
-- [ ] Wire FormSection and PreviewSection together
+- [x] Write tests for App
+- [x] Implement App with ThemeProvider, state, and layout
+- [x] Wire FormSection and PreviewSection together
 
 **Task 19: End-to-End Tests**
 
-- [ ] E2E: Fill form → preview updates
-- [ ] E2E: Copy button → clipboard
-- [ ] E2E: All features working together
+- [x] E2E: Fill form → preview updates
+- [x] E2E: Copy button → clipboard
+- [x] E2E: All features working together
 
 ### Phase 7: Polish
 
 **Task 20: Styling & Responsiveness**
 
-- [ ] Test responsive layout
-- [ ] Verify dark mode
-- [ ] Accessibility check
+- [x] Test responsive layout
+- [x] Verify dark mode
+- [x] Accessibility check
 
 **Task 21: Final QA**
 
-- [ ] Manual testing
-- [ ] All tests passing
-- [ ] No console errors
+- [x] Manual testing
+- [x] All tests passing
+- [x] No console errors
 
 ---
 

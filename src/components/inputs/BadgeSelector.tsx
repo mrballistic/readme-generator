@@ -7,7 +7,7 @@ import {
   Checkbox,
 } from '@mui/material';
 import { BADGE_CONFIGS } from '../../constants/badges';
-import { BadgeType } from '../../types';
+import type { BadgeType } from '../../types';
 
 interface BadgeSelectorProps {
   selectedBadges: BadgeType[];
